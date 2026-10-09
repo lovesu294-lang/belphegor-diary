@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Yomogi&display=swap');
+
+.diary {
+  max-width: 480px;
+  margin: auto;
+  padding: 0 16px 18px;
+  background: #111;
+  color: #D0D0CC;
+  border: 1px solid #555;
+  border-radius: 18px;
+  font-family: 'Yomogi', cursive;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-bottom: 18px;
+  color: #aaa;
+  line-height: 1;
+}
+
+.heading .sigil {
+  font-size: 22px;
+}
+
+.heading .zzz {
+  color: #bbb;
+  letter-spacing: 3px;
+}
+
+.heading .zzz span:nth-child(1) {
+  font-size: 10px;
+}
+
+.heading .zzz span:nth-child(2) {
+  font-size: 13px;
+}
+
+.heading .zzz span:nth-child(3) {
+  font-size: 17px;
+}
+
+.heading .star {
+  margin-left: auto;
+  padding-right: 2px;
+  color: #aaa;
+}
+
+.diary .text {
+  font-size: 12px;
+  line-height: 1.8;
+  letter-spacing: .02em;
+}
+
+.diary .text p {
+  margin: 0 0 12px;
+}
+
+.diary .text p:last-child {
+  margin-bottom: 0;
+}
