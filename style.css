@@ -3,24 +3,25 @@
 
 .diary {
   position: relative;
+  isolation: isolate;
   box-sizing: border-box;
   width: 100%;
   max-width: 480px;
   margin: auto;
-  padding: 34px 24px 38px;
+  padding: 28px 26px;
   background: #292929;
   color: #111;
   font-family: 'Yomogi', cursive;
   overflow: hidden;
 }
 
-/* 外枠 */
+/* 外側と内側の枠 */
 .diary .frame {
   position: absolute;
   inset: 14px;
   border: 3px solid #111;
   pointer-events: none;
-  z-index: 0;
+  z-index: -1;
 }
 
 .diary .frame::before {
@@ -33,92 +34,102 @@
 /* 四隅のゴシック装飾 */
 .diary .corner {
   position: absolute;
-  width: 38px;
-  height: 38px;
-  z-index: 1;
+  width: 44px;
+  height: 44px;
+  z-index: 0;
   pointer-events: none;
 }
 
-.diary .corner::before,
+.diary .corner::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #111;
+}
+
 .diary .corner::after {
   content: "";
   position: absolute;
-  border-color: #111;
-  border-style: solid;
-}
-
-.diary .corner::before {
-  width: 28px;
-  height: 28px;
-}
-
-.diary .corner::after {
-  width: 17px;
-  height: 17px;
+  width: 19px;
+  height: 19px;
+  border: 2px solid #111;
 }
 
 .diary .tl {
-  top: 18px;
-  left: 18px;
+  top: 20px;
+  left: 20px;
 }
 .diary .tl::before {
   top: 0;
   left: 0;
-  border-width: 0 3px 3px 0;
-  transform: skew(-12deg);
+  border-right: 0;
+  border-bottom: 0;
+  border-radius: 15px 0 0 0;
 }
 .diary .tl::after {
-  top: 8px;
-  left: 8px;
-  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 10px;
+  border-right: 0;
+  border-bottom: 0;
+  transform: skew(-18deg);
 }
 
 .diary .tr {
-  top: 18px;
-  right: 18px;
+  top: 20px;
+  right: 20px;
 }
 .diary .tr::before {
   top: 0;
   right: 0;
-  border-width: 0 0 3px 3px;
-  transform: skew(12deg);
+  border-left: 0;
+  border-bottom: 0;
+  border-radius: 0 15px 0 0;
 }
 .diary .tr::after {
-  top: 8px;
-  right: 8px;
-  border-width: 0 0 2px 2px;
+  top: 10px;
+  right: 10px;
+  border-left: 0;
+  border-bottom: 0;
+  transform: skew(18deg);
 }
 
 .diary .bl {
-  bottom: 18px;
-  left: 18px;
+  bottom: 20px;
+  left: 20px;
 }
 .diary .bl::before {
   bottom: 0;
   left: 0;
-  border-width: 3px 3px 0 0;
-  transform: skew(12deg);
+  border-right: 0;
+  border-top: 0;
+  border-radius: 0 0 0 15px;
 }
 .diary .bl::after {
-  bottom: 8px;
-  left: 8px;
-  border-width: 2px 2px 0 0;
+  bottom: 10px;
+  left: 10px;
+  border-right: 0;
+  border-top: 0;
+  transform: skew(18deg);
 }
 
 .diary .br {
-  bottom: 18px;
-  right: 18px;
+  bottom: 20px;
+  right: 20px;
 }
 .diary .br::before {
   bottom: 0;
   right: 0;
-  border-width: 3px 0 0 3px;
-  transform: skew(-12deg);
+  border-left: 0;
+  border-top: 0;
+  border-radius: 0 0 15px 0;
 }
 .diary .br::after {
-  bottom: 8px;
-  right: 8px;
-  border-width: 2px 0 0 2px;
+  bottom: 10px;
+  right: 10px;
+  border-left: 0;
+  border-top: 0;
+  transform: skew(-18deg);
 }
 
 /* 上下の飾り線 */
@@ -126,7 +137,7 @@
   position: absolute;
   left: 16%;
   right: 16%;
-  height: 12px;
+  height: 13px;
   border-top: 2px solid #111;
   border-bottom: 1px solid #111;
   z-index: 1;
@@ -141,26 +152,26 @@
   bottom: 25px;
 }
 
-.diary .ornament::after {
-  content: "◆";
+.diary .ornament::before {
+  content: "";
   position: absolute;
   left: 50%;
-  top: -12px;
-  transform: translateX(-50%);
-  padding: 0 7px;
+  top: -7px;
+  width: 9px;
+  height: 9px;
+  border: 2px solid #111;
   background: #292929;
-  color: #111;
-  font-size: 16px;
+  transform: translateX(-50%) rotate(45deg);
 }
 
-/* 中身を枠より前に */
+/* 中身 */
 .diary .content {
   position: relative;
   z-index: 2;
 }
 
-/* 紋章 */
-.emblem {
+/* ベルフェゴールの紋章 */
+.diary .emblem {
   width: 200px;
   height: 200px;
   margin: 24px auto 38px;
@@ -187,50 +198,15 @@
   position: absolute;
 }
 
-.emblem .b {
-  top: 12px;
-  left: 94px;
-}
-.emblem .e1 {
-  top: 26px;
-  left: 139px;
-  transform: rotate(38deg);
-}
-.emblem .l {
-  top: 69px;
-  left: 169px;
-  transform: rotate(75deg);
-}
-.emblem .p {
-  top: 119px;
-  left: 164px;
-  transform: rotate(115deg);
-}
-.emblem .h {
-  top: 158px;
-  left: 129px;
-  transform: rotate(155deg);
-}
-.emblem .e2 {
-  top: 156px;
-  left: 55px;
-  transform: rotate(210deg);
-}
-.emblem .g {
-  top: 119px;
-  left: 20px;
-  transform: rotate(245deg);
-}
-.emblem .o {
-  top: 69px;
-  left: 17px;
-  transform: rotate(285deg);
-}
-.emblem .r {
-  top: 26px;
-  left: 48px;
-  transform: rotate(320deg);
-}
+.emblem .b { top: 12px; left: 94px; }
+.emblem .e1 { top: 26px; left: 139px; transform: rotate(38deg); }
+.emblem .l { top: 69px; left: 169px; transform: rotate(75deg); }
+.emblem .p { top: 119px; left: 164px; transform: rotate(115deg); }
+.emblem .h { top: 158px; left: 129px; transform: rotate(155deg); }
+.emblem .e2 { top: 156px; left: 55px; transform: rotate(210deg); }
+.emblem .g { top: 119px; left: 20px; transform: rotate(245deg); }
+.emblem .o { top: 69px; left: 17px; transform: rotate(285deg); }
+.emblem .r { top: 26px; left: 48px; transform: rotate(320deg); }
 
 .emblem .triangle {
   position: absolute;
@@ -256,18 +232,21 @@
   position: absolute;
   background: #111;
 }
+
 .emblem .vertical {
   left: calc(50% - 1.5px);
   top: 91px;
   width: 3px;
   height: 70px;
 }
+
 .emblem .bar1 {
   left: calc(50% - 33px);
   top: 121px;
   width: 66px;
   height: 3px;
 }
+
 .emblem .bar2 {
   left: calc(50% - 24px);
   top: 137px;
@@ -281,14 +260,17 @@
   border-top: 9px solid transparent;
   border-bottom: 9px solid transparent;
 }
+
 .emblem .left {
   left: calc(50% - 43px);
   border-right: 10px solid #111;
 }
+
 .emblem .right {
   left: calc(50% + 33px);
   border-left: 10px solid #111;
 }
+
 .emblem .left2 {
   top: 130px;
   left: calc(50% - 33px);
@@ -296,6 +278,7 @@
   border-bottom-width: 8px;
   border-right: 9px solid #111;
 }
+
 .emblem .right2 {
   top: 130px;
   left: calc(50% + 24px);
@@ -303,6 +286,7 @@
   border-bottom-width: 8px;
   border-left: 9px solid #111;
 }
+
 .emblem .tip {
   position: absolute;
   left: calc(50% - 8px);
@@ -312,11 +296,12 @@
   border-bottom: 10px solid #111;
 }
 
-/* 日記本文：背景・枠線なし */
+/* 本文：黒背景・囲み線なし */
 .diary .box {
-  background: transparent;
-  border: none;
-  border-radius: 0;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
   padding: 14px 22px 30px;
   color: #D0D0CC;
   box-sizing: border-box;
@@ -340,18 +325,15 @@
   letter-spacing: 3px;
 }
 
-.diary .zzz span:nth-child(1) {
-  font-size: 10px;
-}
-.diary .zzz span:nth-child(2) {
-  font-size: 13px;
-}
-.diary .zzz span:nth-child(3) {
-  font-size: 17px;
-}
+.diary .zzz span:nth-child(1) { font-size: 10px; }
+.diary .zzz span:nth-child(2) { font-size: 13px; }
+.diary .zzz span:nth-child(3) { font-size: 17px; }
 
-/* 普通の改行を表示 */
+/* 普通の改行で段落を分ける */
 .diary .text {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
   font-size: 16px;
   line-height: 1.9;
   letter-spacing: .02em;
@@ -361,8 +343,4 @@
 
 .diary .text p {
   margin: 0;
-}
-
-.diary .text p:last-child {
-  margin-bottom: 0;
 }
