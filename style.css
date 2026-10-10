@@ -20,39 +20,75 @@
   font: 20px 'Times New Roman', serif;
 }
 
-.emblem::before {
-  content: "B";
+.emblem .ring {
   position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding-top: 8px;
-  box-sizing: border-box;
   border: 3px solid #111;
   border-radius: 50%;
 }
 
-.emblem::after {
-  content: "E       L       P       H       E       G       O       R";
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 11px;
-  line-height: 1.2;
-  overflow-wrap: anywhere;
-  padding: 20px;
-  box-sizing: border-box;
-  border: 3px solid #111;
-  border-radius: 50%;
+.emblem .outer {
+  inset: 10px;
 }
 
-.emblem .ring,
+.emblem .inner {
+  inset: 32px;
+}
+
 .emblem .letter {
-  display: none;
+  position: absolute;
+}
+
+.emblem .b {
+  top: 12px;
+  left: 94px;
+}
+
+.emblem .e1 {
+  top: 26px;
+  left: 139px;
+  transform: rotate(38deg);
+}
+
+.emblem .l {
+  top: 69px;
+  left: 169px;
+  transform: rotate(75deg);
+}
+
+.emblem .p {
+  top: 119px;
+  left: 164px;
+  transform: rotate(115deg);
+}
+
+.emblem .h {
+  top: 158px;
+  left: 129px;
+  transform: rotate(155deg);
+}
+
+.emblem .e2 {
+  top: 156px;
+  left: 55px;
+  transform: rotate(210deg);
+}
+
+.emblem .g {
+  top: 119px;
+  left: 20px;
+  transform: rotate(245deg);
+}
+
+.emblem .o {
+  top: 69px;
+  left: 17px;
+  transform: rotate(285deg);
+}
+
+.emblem .r {
+  top: 26px;
+  left: 48px;
+  transform: rotate(320deg);
 }
 
 .emblem .triangle {
