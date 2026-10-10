@@ -357,3 +357,29 @@ border-radius: 0 0 20px 0;
 .diary .text p {
   margin: 0;
 }
+
+
+/* 本文の余白を表紙と同じくらいに詰める */
+.diary .heading {
+  margin-bottom: 18px !important;
+}
+
+.diary .text {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  font-size: 12px !important;
+  line-height: 1.2 !important;
+  letter-spacing: .02em;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+
+.diary .text p {
+  margin: 0 0 12px !important;
+  padding: 0 !important;
+}
+
+.diary .text p:last-child {
+  margin-bottom: 0 !important;
+}
