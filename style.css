@@ -52,7 +52,7 @@ border-right: 2px solid #111;
 border-radius: 0 0 20px 0;
 }
 
-/* 悪魔的ゴシック装飾：内側に収めた鋭い角 */
+/* 悪魔的ゴシック：鋭い角＋二重装飾 */
 .diary .corner {
   position: absolute;
   width: 38px;
@@ -70,98 +70,102 @@ border-radius: 0 0 20px 0;
 
 /* 左上 */
 .diary .tl {
-  top: 17px;
-  left: 17px;
+  top: 22px;
+  left: 22px;
 }
 .diary .tl::before {
   top: 0;
   left: 0;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   border-top: 2px solid #111;
   border-left: 2px solid #111;
-  border-radius: 14px 0 0 0;
+  border-radius: 12px 0 0 0;
 }
 .diary .tl::after {
-  top: 7px;
-  left: 7px;
-  width: 20px;
-  height: 20px;
+  top: 5px;
+  left: 5px;
+  width: 18px;
+  height: 18px;
   border-top: 1px solid #111;
   border-left: 1px solid #111;
-  transform: skew(-12deg);
+  transform: skew(-18deg);
+  box-shadow: -3px -3px 0 -2px #111;
 }
 
 /* 右上 */
 .diary .tr {
-  top: 17px;
-  right: 17px;
+  top: 22px;
+  right: 22px;
 }
 .diary .tr::before {
   top: 0;
   right: 0;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   border-top: 2px solid #111;
   border-right: 2px solid #111;
-  border-radius: 0 14px 0 0;
+  border-radius: 0 12px 0 0;
 }
 .diary .tr::after {
-  top: 7px;
-  right: 7px;
-  width: 20px;
-  height: 20px;
+  top: 5px;
+  right: 5px;
+  width: 18px;
+  height: 18px;
   border-top: 1px solid #111;
   border-right: 1px solid #111;
-  transform: skew(12deg);
+  transform: skew(18deg);
+  box-shadow: 3px -3px 0 -2px #111;
 }
 
 /* 左下 */
 .diary .bl {
-  bottom: 17px;
-  left: 17px;
+  bottom: 22px;
+  left: 22px;
 }
 .diary .bl::before {
   bottom: 0;
   left: 0;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   border-bottom: 2px solid #111;
   border-left: 2px solid #111;
-  border-radius: 0 0 0 14px;
+  border-radius: 0 0 0 12px;
 }
 .diary .bl::after {
-  bottom: 7px;
-  left: 7px;
-  width: 20px;
-  height: 20px;
+  bottom: 5px;
+  left: 5px;
+  width: 18px;
+  height: 18px;
   border-bottom: 1px solid #111;
   border-left: 1px solid #111;
-  transform: skew(12deg);
+  transform: skew(18deg);
+  box-shadow: -3px 3px 0 -2px #111;
 }
 
 /* 右下 */
 .diary .br {
-  bottom: 17px;
-  right: 17px;
+  bottom: 22px;
+  right: 22px;
 }
 .diary .br::before {
   bottom: 0;
   right: 0;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   border-bottom: 2px solid #111;
   border-right: 2px solid #111;
-  border-radius: 0 0 14px 0;
+  border-radius: 0 0 12px 0;
 }
 .diary .br::after {
-  bottom: 7px;
-  right: 7px;
-  width: 20px;
-  height: 20px;
+  bottom: 5px;
+  right: 5px;
+  width: 18px;
+  height: 18px;
   border-bottom: 1px solid #111;
   border-right: 1px solid #111;
-  transform: skew(-12deg);
+  transform: skew(-18deg);
+  box-shadow: 3px 3px 0 -2px #111;
 }
 
 /* 上下の飾り線 */
