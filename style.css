@@ -383,3 +383,18 @@ border-radius: 0 0 20px 0;
 .diary .text p:last-child {
   margin-bottom: 0 !important;
 }
+
+
+.diary .text {
+  white-space: pre-line !important;
+  line-height: 1.2 !important;
+}
+
+.diary .text p {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.diary .text br {
+  line-height: 1.2 !important;
+}
