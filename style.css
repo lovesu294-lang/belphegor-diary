@@ -50,8 +50,8 @@ height: 24px;
 }
 
 .diary .tl {
-top: 20px;
-left: 20px;
+top: 14px;
+left: 14px;
 }
 .diary .tl::before {
 top: 0;
@@ -70,8 +70,8 @@ border-left: 1px solid #111;
 }
 
 .diary .tr {
-top: 20px;
-right: 20px;
+top: 14px;
+right: 14px;
 }
 .diary .tr::before {
 top: 0;
@@ -90,8 +90,8 @@ border-right: 1px solid #111;
 }
 
 .diary .bl {
-bottom: 20px;
-left: 20px;
+bottom: 14px;
+left: 14px;
 }
 .diary .bl::before {
 bottom: 0;
@@ -110,8 +110,8 @@ border-left: 1px solid #111;
 }
 
 .diary .br {
-bottom: 20px;
-right: 20px;
+bottom: 14px;
+right: 14px;
 }
 .diary .br::before {
 bottom: 0;
