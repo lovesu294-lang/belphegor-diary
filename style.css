@@ -160,7 +160,7 @@
 .diary .emblem {
   width: 200px;
   height: 200px;
-  margin: 24px auto 38px;
+  margin: 24px auto 8px;
   position: relative;
   color: #111;
   font: 20px 'Times New Roman', serif;
@@ -325,7 +325,7 @@
   box-shadow: none !important;
   color: #111 !important;
   font-size: 12px !important;
-  line-height: 1.0 !important;
+  line-height: 1.2 !important;
   letter-spacing: .02em;
   white-space: pre-line !important;
   overflow-wrap: anywhere;
@@ -339,5 +339,5 @@
 }
 
 .diary .text br {
-  line-height: 1.5 !important;
+  line-height: 1.2 !important;
 }
