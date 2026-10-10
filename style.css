@@ -31,11 +31,11 @@
   border: 1px solid #111;
 }
 
-/* 四隅のゴシック装飾：重なりを減らした版 */
+/* 四隅のゴシック装飾：曲線と二重線 */
 .diary .corner {
 position: absolute;
-width: 34px;
-height: 34px;
+width: 44px;
+height: 44px;
 z-index: 1;
 pointer-events: none;
 }
@@ -45,10 +45,9 @@ pointer-events: none;
 content: "";
 position: absolute;
 box-sizing: border-box;
-width: 24px;
-height: 24px;
 }
 
+/* 左上 */
 .diary .tl {
 top: 14px;
 left: 14px;
@@ -56,19 +55,23 @@ left: 14px;
 .diary .tl::before {
 top: 0;
 left: 0;
+width: 34px;
+height: 34px;
 border-top: 2px solid #111;
 border-left: 2px solid #111;
-border-radius: 12px 0 0 0;
+border-radius: 18px 0 0 0;
 }
 .diary .tl::after {
 top: 7px;
 left: 7px;
-width: 17px;
-height: 17px;
+width: 25px;
+height: 25px;
 border-top: 1px solid #111;
 border-left: 1px solid #111;
+border-radius: 13px 0 0 0;
 }
 
+/* 右上 */
 .diary .tr {
 top: 14px;
 right: 14px;
@@ -76,19 +79,23 @@ right: 14px;
 .diary .tr::before {
 top: 0;
 right: 0;
+width: 34px;
+height: 34px;
 border-top: 2px solid #111;
 border-right: 2px solid #111;
-border-radius: 0 12px 0 0;
+border-radius: 0 18px 0 0;
 }
 .diary .tr::after {
 top: 7px;
 right: 7px;
-width: 17px;
-height: 17px;
+width: 25px;
+height: 25px;
 border-top: 1px solid #111;
 border-right: 1px solid #111;
+border-radius: 0 13px 0 0;
 }
 
+/* 左下 */
 .diary .bl {
 bottom: 14px;
 left: 14px;
@@ -96,19 +103,23 @@ left: 14px;
 .diary .bl::before {
 bottom: 0;
 left: 0;
+width: 34px;
+height: 34px;
 border-bottom: 2px solid #111;
 border-left: 2px solid #111;
-border-radius: 0 0 0 12px;
+border-radius: 0 0 0 18px;
 }
 .diary .bl::after {
 bottom: 7px;
 left: 7px;
-width: 17px;
-height: 17px;
+width: 25px;
+height: 25px;
 border-bottom: 1px solid #111;
 border-left: 1px solid #111;
+border-radius: 0 0 0 13px;
 }
 
+/* 右下 */
 .diary .br {
 bottom: 14px;
 right: 14px;
@@ -116,17 +127,20 @@ right: 14px;
 .diary .br::before {
 bottom: 0;
 right: 0;
+width: 34px;
+height: 34px;
 border-bottom: 2px solid #111;
 border-right: 2px solid #111;
-border-radius: 0 0 12px 0;
+border-radius: 0 0 18px 0;
 }
 .diary .br::after {
 bottom: 7px;
 right: 7px;
-width: 17px;
-height: 17px;
+width: 25px;
+height: 25px;
 border-bottom: 1px solid #111;
 border-right: 1px solid #111;
+border-radius: 0 0 13px 0;
 }
 
 /* 上下の飾り線 */
