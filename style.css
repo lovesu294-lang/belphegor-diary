@@ -1,4 +1,3 @@
-```css
 @import url('https://fonts.googleapis.com/css2?family=Yomogi&display=swap');
 
 .diary {
@@ -145,4 +144,3 @@
 }
 .diary .text p { margin:0 0 12px; }
 .diary .text p:last-child { margin-bottom:0; }
-```
