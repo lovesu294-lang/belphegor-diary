@@ -55,81 +55,102 @@
   height: 19px;
   border: 2px solid #111;
 }
+/* 四隅のゴシック装飾：重なりを減らした版 */
+.diary .corner {
+position: absolute;
+width: 34px;
+height: 34px;
+z-index: 1;
+pointer-events: none;
+}
+
+.diary .corner::before,
+.diary .corner::after {
+content: "";
+position: absolute;
+box-sizing: border-box;
+width: 24px;
+height: 24px;
+}
 
 .diary .tl {
-  top: 20px;
-  left: 20px;
+top: 20px;
+left: 20px;
 }
 .diary .tl::before {
-  top: 0;
-  left: 0;
-  border-right: 0;
-  border-bottom: 0;
-  border-radius: 15px 0 0 0;
+top: 0;
+left: 0;
+border-top: 2px solid #111;
+border-left: 2px solid #111;
+border-radius: 12px 0 0 0;
 }
 .diary .tl::after {
-  top: 10px;
-  left: 10px;
-  border-right: 0;
-  border-bottom: 0;
-  transform: skew(-18deg);
+top: 7px;
+left: 7px;
+width: 17px;
+height: 17px;
+border-top: 1px solid #111;
+border-left: 1px solid #111;
 }
 
 .diary .tr {
-  top: 20px;
-  right: 20px;
+top: 20px;
+right: 20px;
 }
 .diary .tr::before {
-  top: 0;
-  right: 0;
-  border-left: 0;
-  border-bottom: 0;
-  border-radius: 0 15px 0 0;
+top: 0;
+right: 0;
+border-top: 2px solid #111;
+border-right: 2px solid #111;
+border-radius: 0 12px 0 0;
 }
 .diary .tr::after {
-  top: 10px;
-  right: 10px;
-  border-left: 0;
-  border-bottom: 0;
-  transform: skew(18deg);
+top: 7px;
+right: 7px;
+width: 17px;
+height: 17px;
+border-top: 1px solid #111;
+border-right: 1px solid #111;
 }
 
 .diary .bl {
-  bottom: 20px;
-  left: 20px;
+bottom: 20px;
+left: 20px;
 }
 .diary .bl::before {
-  bottom: 0;
-  left: 0;
-  border-right: 0;
-  border-top: 0;
-  border-radius: 0 0 0 15px;
+bottom: 0;
+left: 0;
+border-bottom: 2px solid #111;
+border-left: 2px solid #111;
+border-radius: 0 0 0 12px;
 }
 .diary .bl::after {
-  bottom: 10px;
-  left: 10px;
-  border-right: 0;
-  border-top: 0;
-  transform: skew(18deg);
+bottom: 7px;
+left: 7px;
+width: 17px;
+height: 17px;
+border-bottom: 1px solid #111;
+border-left: 1px solid #111;
 }
 
 .diary .br {
-  bottom: 20px;
-  right: 20px;
+bottom: 20px;
+right: 20px;
 }
 .diary .br::before {
-  bottom: 0;
-  right: 0;
-  border-left: 0;
-  border-top: 0;
-  border-radius: 0 0 15px 0;
+bottom: 0;
+right: 0;
+border-bottom: 2px solid #111;
+border-right: 2px solid #111;
+border-radius: 0 0 12px 0;
 }
 .diary .br::after {
-  bottom: 10px;
-  right: 10px;
-  border-left: 0;
-  border-top: 0;
-  transform: skew(-18deg);
+bottom: 7px;
+right: 7px;
+width: 17px;
+height: 17px;
+border-bottom: 1px solid #111;
+border-right: 1px solid #111;
 }
 
 /* 上下の飾り線 */
