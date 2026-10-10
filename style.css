@@ -118,7 +118,7 @@
   border-right: 1px dotted #111;
 }
 
-/* 上下の飾り線：細い二本目の線は削除 */
+/* 上下の飾り線 */
 .diary .ornament {
   position: absolute;
   left: 16%;
@@ -293,29 +293,43 @@
   box-sizing: border-box;
 }
 
-/* ⛧ z z Z */
+/* 星・zzZ・タイトルを横並びにする */
 .diary .heading {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 5px;
   margin: 0 0 18px !important;
   padding: 0;
   color: #111;
-  line-height: 1;
+  line-height: 1.2;
 }
 
 .diary .sigiltext {
   font-size: 25px;
+  flex-shrink: 0;
 }
 
 .diary .zzz {
   color: #111;
   letter-spacing: 3px;
+  flex-shrink: 0;
 }
 
 .diary .zzz span:nth-child(1) { font-size: 10px; }
 .diary .zzz span:nth-child(2) { font-size: 13px; }
 .diary .zzz span:nth-child(3) { font-size: 17px; }
+
+/* 短いタイトル：本文より太字 */
+.diary .entry-title {
+  color: #111 !important;
+  font-family: 'Yomogi', cursive;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  line-height: 1.3;
+  margin: 0;
+  padding: 0;
+}
 
 /* 本文：改行を維持、行間を詰める */
 .diary .text {
